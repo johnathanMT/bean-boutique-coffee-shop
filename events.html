@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique Coffee Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="BB_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="BB_index.html" class="logo">Bean <span class="highlight">Boutique</span> ☕</a>
+        <div class="header-right">
+            <a class="active" href="BB_index.html">Home</a>
+            <a href="coffee.html">Coffee Selections</a>
+            <a href="brewing.html">Brewing Equipment</a>
+            <a class="active" href="events.html">Events</a>
+            <a href="cart.html" class="cart-link">Coffee Cart 🛒<span class="cart-count">0</span></a>
+            <a href="offers.html">Special Offers</a>
+        </div>
+    </div>
+
+    <!-- Events- Section -->
+    <div class="events-section">
+
+        <h1 class="main-title">Upcoming Events & Workshops</h1>
+        <hr class="divider">
+        <p class="intro-text">Join us to deepen your knowledge, meet fellow coffee enthusiasts, and taste exclusive
+            brews. Reserve your spot today!</p>
+
+        <div class="event-card">
+            <div class="event-image">
+                <img src="images/heart_coff_for_event.jpg" alt="Pour Over Coffee">
+            </div>
+            <div class="event-details">
+                <h2>The Art of the Winter Latte</h2>
+                <p class="event-date">
+                    <strong>**Date:**</strong> Saturday, January 18th | <strong>**Time:**</strong> 10:00 AM - 12:00
+                    PM
+                </p>
+                <p class="description">
+                    Transform your morning cup into a masterpiece. Join our head barista for a hands-on session on
+                    steaming silky milk and creating festive tulip and heart designs. Perfect for beginners wanting to
+                    impress!
+                </p>
+                <p class="cost"><strong>Cost:</strong> $45</p>
+                <button class="register-btn">Register Now</button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-image">
+                <img src="images/coffee_bean_for_event.jpg" alt="Coffee Tasting">
+            </div>
+            <div class="event-details">
+                <h2>Dark Roasts & Chocolate Pairing</h2>
+                <p class="event-date">
+                    <strong>**Date:**</strong> Thursday, February 6th | <strong>**Time:**</strong> 6:30 PM - 8:00 PM
+                </p>
+                <p class="description">
+                    Indulge in the ultimate winter pairing. We explore how our single-origin dark roasts complement
+                    artisan chocolates. A sensory journey designed to warm your soul and awaken your palate.
+                </p>
+                <p class="cost"><strong>Cost:</strong> $30</p>
+                <button class="register-btn">Register Now</button>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+
+        <form action="/action_page.php">
+            <div class="reg-container">
+                <h1>Register</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Your Email" name="email" id="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+
+            <div class="container signin">
+                <p>Already have an account? <a href="#">Sign in</a>.</p>
+            </div>
+        </form>
+
+
+    </div>
+
+
+
+
+    <!--  MAIN END -->
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <div class="footer-content">
+            <h3 class="footer-title">Contact Us</h3>
+            <hr class="footer-line">
+
+            <p>
+                <i class="fa fa-map-marker"></i>
+                73rd Street, Between 106 Street and 107 Street, Mandalay
+            </p>
+
+            <p>
+                <i class="fa fa-phone"></i>
+                (+959) 123-4567
+            </p>
+
+            <p>
+                <i class="fa fa-envelope"></i>
+                info@beanboutique.com
+            </p>
+        </div>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-yahoo"></a>
+
+        <p class="copyright">© 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+
+    </div>
+    <!-- Footer End -->
+
+    <script src="cart.js"></script>
+
+    <script>
+        new Typed('#product-search', {
+            strings: ["Search for Espresso...", "Try Organic...", "Type 'Single' or 'Blend'..."],
+            typeSpeed: 50,
+            backSpeed: 25,
+            attr: 'placeholder',
+            bindInputFocusEvents: true,
+            loop: true
+        });
+        AOS.init();
+
+    </script>
+
+
+</body>
+
+
+
+</html>

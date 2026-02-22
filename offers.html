@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Special Offers</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="BB_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="BB_index.html" class="logo">Bean <span class="highlight">Boutique</span> ☕</a>
+        <div class="header-right">
+            <a href="BB_index.html">Home</a>
+            <a href="coffee.html">Coffee Selections</a>
+            <a href="brewing.html">Brewing Equipment</a>
+            <a href="events.html">Events</a>
+            <a href="cart.html" class="cart-link">Coffee Cart 🛒 <span class="cart-count">0</span></a>
+            <a class="active" href="offers.html">Special Offers</a>
+        </div>
+    </div>
+
+    <div class="offers-hero" data-aos="fade-down">
+        <h1 class="hero-title-large">The Winter Collection</h1>
+        <p class="hero-subtitle">Exclusive deals tailored for the true coffee connoisseur.</p>
+    </div>
+
+    <section class="subscription-section">
+        <h2 class="section-title">Join The Bean Club</h2>
+        <p class="section-desc">Freshly roasted beans delivered to your door. Cancel anytime.</p>
+
+        <div class="pricing-grid">
+
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                <h3 class="plan-name">The Daily Grind</h3>
+                <div class="plan-price">$18<span class="per-month">/mo</span></div>
+                <p class="plan-desc">Perfect for the casual drinker.</p>
+                <ul class="plan-features">
+                    <li>✔ 1 Bag (12oz) Monthly</li>
+                    <li>✔ House Blends</li>
+                    <li>✔ 5% Shop Discount</li>
+                    <li>✔ Free Shipping</li>
+                </ul>
+                <button class="btn-subscribe" onclick="handleSubscription('The Daily Grind')">Subscribe</button>
+            </div>
+
+            <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                <div class="badge-popular">MOST POPULAR</div>
+                <h3 class="plan-name">The Connoisseur</h3>
+                <div class="plan-price">$32<span class="per-month">/mo</span></div>
+                <p class="plan-desc">Explore the world of flavor.</p>
+                <ul class="plan-features">
+                    <li>✔ 2 Bags (12oz) Monthly</li>
+                    <li>✔ <strong>Single Origin</strong> Selection</li>
+                    <li>✔ 10% Shop Discount</li>
+                    <li>✔ Exclusive Tasting Notes</li>
+                    <li>✔ Free Shipping</li>
+                </ul>
+                <button class="btn-subscribe gold-btn"
+                    onclick="handleSubscription('The Connoisseur')">Subscribe</button>
+            </div>
+
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="plan-name">The Barista</h3>
+                <div class="plan-price">$55<span class="per-month">/mo</span></div>
+                <p class="plan-desc">For the serious brewer.</p>
+                <ul class="plan-features">
+                    <li>✔ 3 Bags (12oz) Monthly</li>
+                    <li>✔ Rare & Limited Editions</li>
+                    <li>✔ <strong>15% Shop Discount</strong></li>
+                    <li>✔ Early Access to Gear</li>
+                    <li>✔ Free Shipping</li>
+                </ul>
+                <button class="btn-subscribe" onclick="handleSubscription('The Barista')">Subscribe</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bundle-section" data-aos="fade-in">
+        <h2 class="section-title text-gold">Limited Time Bundles</h2>
+        <p class="section-desc text-white">Save big when you brew better together.</p>
+
+        <div class="bundle-grid">
+
+            <div class="bundle-card">
+                <div class="bundle-img-wrapper">
+                    <img src="images/french_press.jpg" alt="Starter Kit">
+                </div>
+                <div class="bundle-content">
+                    <h3 class="bundle-title">The Starter Kit</h3>
+                    <p class="bundle-info">French Press + 1 Bag of House Blend + Ceramic Mug</p>
+                    <div class="price-wrapper">
+                        <span class="old-price">$65.00</span>
+                        <span class="new-price">$49.99</span>
+                    </div>
+                    <button class="btn-cart" onclick="addToCart('Starter Kit Bundle', 49.99, 'french_press.jpg')">Add to
+                        Cart</button>
+                </div>
+            </div>
+
+            <div class="bundle-card">
+                <div class="bundle-img-wrapper">
+                    <img src="images/espresso_machine.jpg" alt="Barista Kit">
+                </div>
+                <div class="bundle-content">
+                    <h3 class="bundle-title">Pro Barista Set</h3>
+                    <p class="bundle-info">Espresso Machine + Electric Grinder + 2 Bags Espresso Roast</p>
+                    <div class="price-wrapper">
+                        <span class="old-price">$600.00</span>
+                        <span class="new-price">$520.00</span>
+                    </div>
+                    <button class="btn-cart" onclick="addToCart('Pro Barista Set', 520.00, 'espresso_machine.jpg')">Add
+                        to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">Contact Us</h3>
+            <hr class="footer-line">
+            <p><i class="fa fa-map-marker"></i> 73rd Street, Between 106 Street and 107 Street, Mandalay</p>
+            <p><i class="fa fa-phone"></i> (+959) 123-4567</p>
+            <p><i class="fa fa-envelope"></i> info@beanboutique.com</p>
+        </div>
+        <p>Follow us on Social Media</p>
+        <div class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-yahoo"></a>
+        </div>
+        <p class="copyright">© 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+    </div>
+
+    <script src="cart.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

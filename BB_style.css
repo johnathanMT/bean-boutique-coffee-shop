@@ -1,0 +1,1807 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('images/coffee_cup_in_winter_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header (Glassmorphism) */
+.header {
+    overflow: hidden;
+    background-color: rgba(44, 57, 48, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 35px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header a {
+    float: left;
+    color: #F1F8E9;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* LOGO STYLING */
+.header a.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #E6C86E;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header a.logo .highlight {
+    color: #ffffff !important;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.header a:hover {
+    background-color: silver;
+    color: white;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.header a.active {
+    background-color: #a68e44;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-right {
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .header-right {
+        float: none;
+    }
+}
+
+
+/* animated text search */
+.search-container {
+    padding: 15px 15%;
+    text-align: center;
+    background-color: silver;
+    border-bottom: 1px solid #ddd;
+}
+
+#product-search {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#product-search:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.search-animation {
+    display: block;
+    margin-top: 5px;
+    height: 1.2em;
+    font-size: 0.9em;
+    color: #888;
+    transition: opacity 0.5s ease-in-out;
+    animation: typing 2s steps(40, end);
+}
+
+
+
+
+/* animated text search END */
+
+
+/* MAIN CONTENT & LAYOUT */
+.main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Slide Show Start */
+/* Slideshow container */
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+/* 
+.mySlides {
+    display: none
+} */
+
+.slide-img {
+    vertical-align: middle;
+    width: 100%;
+    height: 600px;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: silver;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* Slide Show End */
+
+
+/* Modal Popup */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+#emailSignupForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#emailInput {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#emailsubmit {
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: #8b5a2b;
+    border-radius: 4px;
+}
+
+#emailsubmit:hover {
+    background-color: #6d4a2a;
+    color: white;
+}
+
+.small-text {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+}
+
+/* Modal Popup  END */
+
+
+
+/* Boutique wii become white word */
+.text-white {
+    color: #ffffff !important;
+    /* White */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    /* a littel Glow */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.welcome-section {
+    text-align: center;
+    padding: 50px 0;
+    color: #F1F8E9;
+}
+
+/* h1 class="main" is change to hero-title */
+.hero-title {
+    font-size: 0px;
+    text-align: center;
+    color: #E6C86E;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 10px;
+}
+
+/* New add  brand-name class */
+.brand-name {
+    font-family: 'Great Vibes', cursive;
+    color: #D4AF37;
+    font-size: 80px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #F1F8E9;
+    text-shadow: 2px 2px 3px brown;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #D4AF37;
+    text-shadow: 2px 2px 3px brown;
+}
+
+h3 {
+    color: red;
+    text-shadow: white;
+}
+
+/* p2  motto-text အဖြစ်ထားသည် */
+.motto-text {
+    font-size: 35px;
+    color: green;
+    font-style: italic;
+    margin-bottom: 20px;
+    /* (Black shadow) */
+    text-shadow: 2px 2px 3px white;
+}
+
+
+/* Gold Lines */
+.gold-line {
+    border: 0;
+    border-top: 1px solid #D4AF37;
+    margin: 20px auto;
+}
+
+.gold-line.large {
+    width: 50%;
+}
+
+.gold-line.small {
+    width: 30%;
+}
+
+.gold-line.product-card {
+    width: 35%;
+
+}
+
+
+/* GRID SYSTEM */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.column {
+    flex: 0 1 23%;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #D4AF37;
+    cursor: pointer;
+}
+
+.img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.content h3 {
+    color: #096025;
+    text-shadow: 2px 2px 4px wheat;
+}
+
+.content p {
+    color: blanchedalmond;
+}
+
+/* Subscription Section Styles (New Classes) Start */
+
+/* --- Hero Spotlight Section (Product Recommendation) --- */
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/coffee_cup_in_winter_bg.jpg');
+    height: 85vh;
+
+
+    /* High Surface */
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero-spotlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    /* The distance between words and Photo */
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* --- Leftf content control --- */
+.spotlight-text {
+    flex: 1;
+    text-align: left;
+    color: white;
+    animation: slideInLeft 1s ease-out;
+}
+
+.badge-gold {
+    background-color: #D4AF37;
+    color: #1A1110;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.spotlight-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 15px 0;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.spotlight-desc {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-style: italic;
+    border-left: 3px solid #D4AF37;
+    /* Golden bar of beside */
+    padding-left: 15px;
+}
+
+.price-tag {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.spotlight-btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    background-color: #D4AF37;
+    color: #1A1110;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    width: auto;
+    /* Add button styliung */
+}
+
+.spotlight-btn:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
+
+/* --- Right image box --- */
+.spotlight-image-box {
+    flex: 0 0 350px;
+    /* Photo wide */
+    position: relative;
+    animation: zoomIn 1s ease-out;
+}
+
+.spotlight-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #D4AF37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    /* Golden Shadow */
+    transform: rotate(3deg);
+    /* tilting effect of photo*/
+    transition: transform 0.5s;
+}
+
+.spotlight-img:hover {
+    transform: rotate(0deg) scale(1.05);
+    /* Mouse တင်ရင် တည့်သွားပြီး ကြီးလာမယ် */
+}
+
+/* Animation Effects */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .hero-spotlight {
+        flex-direction: column-reverse;
+        /* ဖုန်းဆိုရင် ပုံကို အပေါ်တင်မယ် */
+        text-align: center;
+    }
+
+    .spotlight-text {
+        text-align: center;
+    }
+
+    .spotlight-desc {
+        border-left: none;
+        padding: 0;
+    }
+
+    .spotlight-image-box {
+        flex: 0 0 250px;
+    }
+
+    .spotlight-img {
+        height: 250px;
+    }
+}
+
+
+
+/* Subscription Section Styles (New Classes) End  */
+
+
+/* Product Card */
+
+
+/* --- Coffee Page Intro Section (Specific Design) Start--- */
+
+.coffee-intro {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+
+    /* Background: Deep Coffee Gradient & Glass Effect */
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.95), rgba(26, 17, 16, 0.9));
+    backdrop-filter: blur(5px);
+
+    /* Borders & Shape */
+    border-top: 0.5px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 5px solid #D4AF37;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.coffee-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #E6C86E;
+    /* Light Gold */
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+.coffee-intro .intro-lead {
+    font-size: 1.0rem;
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+}
+
+.coffee-intro .intro-detail {
+    font-size: 1.1rem;
+    color: #d7ccc8;
+    /* Coffee Milk Color */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .coffee-intro {
+        padding: 50px 20px;
+    }
+
+    .coffee-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .coffee-intro .intro-lead {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Coffee Page Intro Section (Specific Design) END --- */
+
+
+/* Cart Function Start from Here */
+
+/* Card */
+.product-card {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 3px brown;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    color: black;
+}
+
+.card {
+
+    flex: 0 0 calc(25% - 20px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: wheat;
+    justify-content: space-between;
+    height: 100%;
+
+
+}
+
+.price {
+
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #007bb5;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    border-radius: 10px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(77, 75, 75);
+    cursor: pointer;
+    width: 75%;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* .card button:hover in former */
+.card :hover {
+    opacity: 0.7;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #D4AF37;
+
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.card ul li {
+    align-items: left;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.card .usage-tips {
+    text-align: left;
+    padding: 0 15px 0px 15px;
+    color: #F39E60;
+}
+
+.card .description {
+    text-align: justify;
+    padding: 0px 15px 0px 15px;
+}
+
+/* cart.html */
+/* Cart Count Badge */
+.cart-count {
+    background-color: #8B4513;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Cart Container */
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cart Items */
+.cart-items {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    margin-right: 20px;
+}
+
+.cart-item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity-controls button {
+    background: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-controls button:hover {
+    background: #A0522D;
+}
+
+.quantity-controls span {
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background: #c82333;
+}
+
+/* Cart Summary */
+.cart-summary {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-row.total {
+    border-bottom: none;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #333;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.checkout-btn {
+    background: #8B4513;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background: #A0522D;
+}
+
+
+/* --- Brewing Page Intro Section (Added New) --- */
+
+.brewing-intro {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(26, 17, 16, 0.85);
+    border-bottom: 4px solid #D4AF37;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.brewing-intro h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #D4AF37;
+    /* Gold Color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.brewing-intro p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    /* White-ish text */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+
+/*Brewing Equiptments  */
+
+
+
+.brewing-equipments {
+    text-align: center;
+    font-size: 50px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #456882;
+}
+
+/* brewing Card */
+
+.brewing-card {
+    text-align: center;
+    font-size: 18px;
+    color: #F5E7C6;
+    /* text-shadow: 2px 2px 3px green; */
+}
+
+.brewing-price {
+    color: grey;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+}
+
+.brewing-card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(77, 75, 75);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.brewing-card:hover {
+    /* opacity: 0.7; */
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    /* transform: translateY(-10px); */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #D4AF37;
+    cursor: pointer;
+}
+
+.brewing-card {
+    flex: 0 0 calc(16.66% - 20px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #456882;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+}
+
+.brewing-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.img {
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+}
+
+
+
+
+/* Event-Section */
+
+
+/* Container */
+.events-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0c5f41;
+    text-shadow: silver 0.1em 0.1em 0.2em;
+}
+
+/* Header Styles */
+.main-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: grey;
+}
+
+/* Event Card Styles */
+.event-card {
+    display: flex;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 30px;
+
+}
+
+/* Image Styles */
+.event-image {
+    flex: 0 0 35%;
+    /
+}
+
+.event-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Text Detail Styles */
+.event-details {
+    flex: 1;
+
+}
+
+.event-details h2 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #4a3b32;
+
+}
+
+.event-date {
+    color: #a0522d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cost {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.register-btn {
+    background-color: #5c4033;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #3e2b22;
+
+}
+
+
+/* Register Form */
+* {
+    box-sizing: border-box
+}
+
+/* Add padding to containers */
+.reg-container {
+    padding: 16px;
+    background-color: whitesmoke;
+    color: #76153C;
+    border-radius: 10px;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+    background-color: #76153C;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+/* =========================== */
+/* Special Offer Al Start */
+/* --- SPECIAL OFFERS PAGE STYLES --- */
+
+/* Hero Section */
+.offers-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 3px solid #D4AF37;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/coffee_cup_in_winter_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title-large {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #D4AF37;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* Subscription Section */
+.subscription-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1A1110;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.text-gold {
+    color: #D4AF37 !important;
+}
+
+.text-white {
+    color: #f1f1f1 !important;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px 25px;
+    width: 320px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #D4AF37;
+}
+
+/* Featured Card (Middle one) */
+.pricing-card.featured {
+    border: 2px solid #D4AF37;
+    background-color: #fffcf5;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.badge-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #D4AF37;
+    color: #1A1110;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    color: #1A1110;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.per-month {
+    font-size: 1rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.plan-desc {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn-subscribe {
+    background-color: #1A1110;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-subscribe:hover {
+    background-color: #333;
+}
+
+.gold-btn {
+    background-color: #D4AF37;
+    color: #1A1110;
+}
+
+.gold-btn:hover {
+    background-color: #bfa34a;
+}
+
+/* Bundle Section */
+.bundle-section {
+    background-color: #1A1110;
+    /* Dark background for luxury feel */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 4px solid #D4AF37;
+}
+
+.bundle-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.bundle-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassmorphism on dark bg */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.bundle-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #D4AF37;
+}
+
+.bundle-img-wrapper img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Circle image */
+    border: 3px solid #D4AF37;
+}
+
+.bundle-content {
+    flex: 1;
+}
+
+.bundle-title {
+    color: #D4AF37;
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+}
+
+.bundle-info {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.price-wrapper {
+    margin-bottom: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.btn-cart {
+    background-color: transparent;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cart:hover {
+    background-color: #D4AF37;
+    color: #1A1110;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+        /* Remove scale on mobile */
+    }
+
+    .bundle-card {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Special-Offer Section END */
+
+
+
+/* --- Quote / Poetry Section Styling Start--- */
+
+.quote-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 60px auto;
+
+    padding: 50px 30px;
+
+
+    background: rgba(26, 17, 16, 0.85);
+    /* Deep Coffee Color with transparency */
+    backdrop-filter: blur(5px);
+
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    /* Gold Border Styling */
+    border-radius: 15px;
+
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 40px;
+    color: #D4AF37;
+    /* Gold Icon */
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.quote-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+
+    color: #E6C86E;
+    /* Light Gold */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.quote-author {
+    font-size: 1rem;
+    color: #bbb;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* Quote / Poetry Section Styling End */
+
+
+
+/* Responsive for Mobile */
+@media screen and (max-width: 600px) {
+    .quote-text {
+        font-size: 1.2rem;
+    }
+
+    .quote-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card.featured {
+        transform: scale(1);
+    }
+
+    .bundle-item {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Special Offers & Subscription Section END */
+
+/* Footer */
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2a110f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-yahoo {
+    background: #430297;
+    color: white;
+}
+
+
+
+
+/* Responsive (Mobile View) */
+@media screen and (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .event-image {
+        width: 100%;
+    }
+
+    .event-details {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quantity-controls {
+        margin: 15px 0;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+
+    .card,
+    .brewing-card {
+        /* flex: 0 1 45%; */
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .card,
+    .card-container,
+    .brewing-card {
+        flex: 0 0 100%;
+    }
+}

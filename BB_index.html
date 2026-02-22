@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique Coffee Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="BB_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="BB_index.html" class="logo">Bean <span class="highlight">Boutique</span> ☕</a>
+    <div class="header-right">
+      <a class="active" href="BB_index.html">Home</a>
+      <a href="coffee.html">Coffee Selections</a>
+      <a href="brewing.html">Brewing Equipment</a>
+      <a href="events.html">Events</a>
+      <a href="cart.html" class="cart-link">Coffee Cart 🛒<span class="cart-count">0</span></a>
+      <a href="offers.html">Special Offers</a>
+    </div>
+  </div>
+
+
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/coffee_slide_1.jpg" alt="Denim Jeans" class="slide-img">
+      <div class="text">Premium Coffee Experience</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/coffee_slide_2.jpeg" alt="Denim Jeans" class="slide-img">
+      <div class="text">Freshly Roasted Beans</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/coffee_slide_3.jpg" alt="Denim Jeans" class="slide-img">
+      <div class="text">Brewed for the Soul</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+
+  <!-- Slide Show END-->
+
+
+  <!-- Modal Popup -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Welcome to Our Coffee Shop!</h2>
+      <p>Get <strong>10% off</strong> your first purchase when you sign up for our newsletter.</p>
+      <form id="emailSignupForm">
+        <input type="email" id="emailInput" placeholder="Enter your email address" required>
+        <button type="submit" id="emailsubmit">Get My Discount</button>
+      </form>
+      <p class="small-text">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+  </div>
+
+  <!-- Modal Popup END -->
+
+
+  <!-- Main Start -->
+
+  <div class="main">
+
+
+    <div class="welcome-section">
+      <h1 class="hero-title">
+        Welcome to<br>
+        <span class="brand-name">Bean <span class="text-white">Boutique</span> Coffee Shop</span>
+
+      </h1>
+      <p class="subtitle">Experience the warmth of premium coffee this winter.</p>
+      <hr class="gold-line large">
+
+      <h2 class="our-motto">Our Motto</h2>
+      <p class="motto-text">"Crafted for the Cold, Brewed for the Soul."</p>
+      <hr class="gold-line small">
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <a href="coffee.html" target="_blank" class="content"
+          style="display: block; text-decoration: none; color: inherit;">
+          <img src="images/coffee_selections.jpg" alt="Coffee Beans" class="img">
+          <h3>Coffee Selections</h3>
+          <p>Discover our unique winter blends.</p>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="brewing.html" target="_blank" class="content"
+          style="display: block; text-decoration: none; color: inherit;">
+          <img src="images/coffee_machines.jpg" alt="Machines" class="img">
+          <h3>Brewing Equipment</h3>
+          <p>Professional gear for home brewing.</p>
+        </a>
+      </div>
+
+
+      <div class="column">
+        <a href="events.html" target="_blank" class="content"
+          style="display: block; text-decoration: none; color: inherit;">
+          <img src="images/coffee_events.jpg" alt="Events" class="img">
+          <h3>Events & Workshops</h3>
+          <p>Join our tasting sessions.</p>
+        </a>
+      </div>
+
+
+      <div class="column">
+        <a href="offers.html" target="_blank" class="content"
+          style="display: block; text-decoration: none; color: inherit;">
+          <img src="images/green_coffee_cup.jpg" alt="Offers" class="img">
+          <h3>Special Offers</h3>
+          <p>Get exclusive winter discounts.</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Coffee Poetry Start -->
+
+  <div class="quote-section" data-aos="fade-up">
+    <i class="fa fa-quote-left quote-icon"></i>
+
+    <h2 class="quote-title">The Winter Brew</h2>
+
+    <p class="quote-text">
+      "The frost may settle on the pane,<br>
+      But warmth returns with every grain.<br>
+      A roasted brew, a golden stream,<br>
+      Awakening your winter dream."
+    </p>
+
+    <hr class="gold-line small">
+
+    <p class="quote-author">- Bean Boutique Philosophy</p>
+  </div>
+
+  <!-- Coffee Poetry End -->
+
+  <!-- Sub-container Start -->
+
+  <div class="hero-section">
+
+    <div class="hero-spotlight">
+
+      <div class="spotlight-text">
+        <span class="badge-gold">★ Barista's Recommendation</span>
+        <h1 class="spotlight-title">Single Origin <span style="color: #D4AF37;">Colombian</span></h1>
+        <p class="spotlight-desc">
+          "Grown in the high Andes, this exclusive winter roast delivers rich notes of caramel and dried fruit.
+          Experience the perfect balance of acidity and body to warm your soul."
+        </p>
+        <div class="price-tag">$19.99</div>
+        <button onclick="addToCart('Single Origin Colombian', 19.99, 'images/single_originColombian.jpg')"
+          class="spotlight-btn">
+          Add to Cart <i class="fa fa-shopping-cart"></i>
+        </button>
+      </div>
+
+      <div class="spotlight-image-box">
+        <img src="images/single_originColombian.jpg" alt="Colombian Coffee" class="spotlight-img">
+        <div class="glow-circle"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Sub-container End -->
+
+  <!--  MAIN END -->
+
+
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.085249446205!2d135.49597647635562!3d34.70302968308689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e77e7e6c1e11%3A0x66cb4f08f34edf1!2sStarbucks%20Coffee%20-%20Hankyu%20Umeda%20Main%20Store%209F%20(Teavana%E2%84%A2)!5e0!3m2!1sen!2sjp!4v1765200338620!5m2!1sen!2sjp"
+    style="width:100%; height:450px; border:0" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <!-- Footer -->
+  <div class="footer">
+
+    <div class="footer-content">
+      <h3 class="footer-title">Contact Us</h3>
+      <hr class="footer-line">
+
+      <p>
+        <i class="fa fa-map-marker"></i>
+        73rd Street, Between 106 Street and 107 Street, Mandalay
+      </p>
+
+      <p>
+        <i class="fa fa-phone"></i>
+        (+959) 123-4567
+      </p>
+
+      <p>
+        <i class="fa fa-envelope"></i>
+        info@beanboutique.com
+      </p>
+    </div>
+
+    <p>Follow us on Social Media</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-yahoo"></a>
+
+    <p class="copyright">© 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+
+  </div>
+
+  <!-- Footer End -->
+
+
+  <script src="cart.js"></script>
+
+
+  <!-- SlideShow  -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+
+  <!-- Model Popup -->
+  <script src="modal_popup.js"></script>
+
+</body>
+
+
+
+
+</html>

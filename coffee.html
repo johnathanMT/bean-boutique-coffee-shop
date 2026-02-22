@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bean Boutique Coffee Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="BB_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="cart.js">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <!-- SweetAlert.js -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="BB_index.html" class="logo">Bean <span class="highlight">Boutique</span> ☕</a>
+    <div class="header-right">
+      <a href="BB_index.html">Home</a>
+      <a class="active" href="coffee.html">Coffee Selections</a>
+      <a href="brewing.html">Brewing Equipment</a>
+      <a href="events.html">Events</a>
+      <a href="cart.html" class="cart-link">Coffee Cart 🛒<span class="cart-count">0</span></a>
+      <a href="offers.html">Special Offers</a>
+    </div>
+  </div>
+
+
+  <!-- Search Container -->
+  <div class="search-container">
+    <input type="text" id="product-search" placeholder="Search for coffee products..." onkeyup="filterProducts()">
+    <span class="search-animation" id="search-animation-text"></span>
+  </div>
+
+
+  <!-- Coffee-intro Section  -->
+
+  <div class="coffee-intro" data-aos="fade-up">
+
+    <h1>Experience the World in a Cup</h1>
+
+    <p class="intro-lead">
+      "From the misty highlands of Colombia to the volcanic soils of Sumatra,
+      we travel the globe to bring you the finest Single Origin beans."
+    </p>
+
+
+
+  </div>
+
+
+
+  </div>
+
+
+
+  <!-- Product Card 1 -->
+  <h2 class="product-card">Product Cart</h2>
+  <hr class="gold-line product-card">
+
+  <div class="card-container" data-aos="zoom-in" data-aos-duration="2000">
+
+    <!-- xoom-in, fade-left,fade- -->
+    <div class="card">
+      <img src="images/single_originColombian.jpg" alt="Denim Jeans" class="img">
+
+      <h1>Single Origin Colombian</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b><i> Grown in the high Andes, this coffee is famous for its rich, mild flavor.
+          It delivers a perfect balance of acidity and body.</i> </p>
+      <p><b>Tasting Notes:</b> Caramel, Dried Fruit, Citrus.</p>
+      <p><b>Roast:</b> Medium Roast.</p>
+
+      <p><button>Add to Cart</butto n>
+      </p>
+    </div>
+
+
+
+    <!-- Product Card 2 -->
+
+
+    <div class="card">
+      <img src="images/single_originWorld.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin World</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b><i> A carefully curated selection of the finest beans from around the globe,
+          brought together for a complex and worldly experience.</i></p>
+      <p><b>Tasting Notes:</b> Berries, Chocolate, Spices.</p>
+      <p><b>Roast:</b> Medium-Dark Roast.</p>
+
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <!-- Product Card 3 -->
+
+
+    <div class="card">
+      <img src="images/single_originBone.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin Bone</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b> <i> A bold and intense coffee with a strong character.
+          Perfect for those who need a serious wake-up call.</i></p>
+      <p><b>Tasting Notes:</b> Earthy, Dark Cocoa, Smoky.</p>
+      <p><b>Roast:</b> Dark Roast.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <!-- Product Card 4 -->
+
+
+    <div class="card">
+      <img src="images/single_originBRAZIL.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin Brazil</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b><i> Classic Brazilian coffee known for its creamy body and low acidity. A comforting cup
+          that pairs perfectly with breakfast.</i></p>
+      <p><b>Tasting Notes:</b> Peanut Butter, Milk Chocolate.</p>
+      <p><b>Roast: </b> Medium Roast.</p>
+
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <!-- Product Card 5 -->
+
+
+    <div class="card">
+      <img src="images/single_originBrazilian.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin Brazilian</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description</b><i>Taking the classic Brazilian bean to a darker level. It offers a deeper, more toasted
+          flavor profile without the bitterness.</i></p>
+      <p><b>Tasting Notes:</b> Toasted Hazelnut, Dark Chocolate.</p>
+      <p><b>Roast:</b> Dark Roast.</p>
+
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <!-- Product Card 6 -->
+
+
+    <div class="card">
+      <img src="images/single_originPeruvian.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin Peruvian</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b> <i>Harvested from the mystic mountains of Peru. This organic coffee is smooth, aromatic,
+          and environmentally friendly.</i></p>
+      <p><b>Tasting Notes:</b> Floral, Herbal, Sweet Citrus.</p>
+      <p><b>Roast:</b> Light-Medium Roast.</p>
+
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <!-- Product Card 7 -->
+
+
+    <div class="card">
+      <img src="images/single_originSumatra.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin Sumatra</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b><i> From the Indonesian islands, Sumatra coffee is unique for its full body and low
+          acidity. A favorite for coffee lovers who like it thick.</i></p>
+      <p><b>Tasting Notes:</b> Cedar, Tobacco, Spicy.</p>
+      <p><b>Roast:</b> Dark Roast.</p>
+
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <!-- Product Card 8 -->
+
+
+    <div class="card">
+      <img src="images/single_originViolentColombia.jpg" alt="Denim Jeans" class="img">
+      <h1>Single Origin Violent Colombia</h1>
+      <p class="price">$19.99</p>
+      <p><b>Description:</b><i> An extra-strong version of our Colombian classic. High caffeine content and bold
+          flavors for the adventurous drinker.</i></p>
+      <p><b>Tasting Notes:</b> Intense Dark Chocolate, Cherry, Smoke.</p>
+      <p><b>Roast:</b> Extra Dark Roast.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+
+  </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+  <div class="footer">
+
+    <div class="footer-content">
+      <h3 class="footer-title">Contact Us</h3>
+      <hr class="footer-line">
+
+      <p>
+        <i class="fa fa-map-marker"></i>
+        73rd Street, Between 106 Street and 107 Street, Mandalay
+      </p>
+
+      <p>
+        <i class="fa fa-phone"></i>
+        (+959) 123-4567
+      </p>
+
+      <p>
+        <i class="fa fa-envelope"></i>
+        info@beanboutique.com
+      </p>
+    </div>
+
+    <p>Follow us on Social Media</p>
+
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-yahoo"></a>
+
+    <p class="copyright">© 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+
+  </div>
+
+  <!-- Footer End -->
+
+  <script src="cart.js"></script>
+
+
+  <script>
+    new Typed('#product-search', {
+      strings: ["Search for Espresso...", "Try Single Origin...", "Type 'Single' or 'Blend'..."],
+      typeSpeed: 50,
+      backSpeed: 25,
+      attr: 'placeholder',
+      bindInputFocusEvents: true,
+      loop: true
+    });
+    AOS.init();
+
+  </script>
+
+</body>
+
+</html>
