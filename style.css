@@ -1805,3 +1805,45 @@ a {
         flex: 0 0 100%;
     }
 }
+
+
+
+/* style.css ရဲ့ အောက်ဆုံးမှာ ထည့်ရန် */
+
+/* ပုံမှန်အချိန်မှာ menu-btn ကို ဖျောက်ထားမယ် */
+#menu-btn {
+    display: none;
+    font-size: 25px;
+    color: #D4AF37; /* ရွှေရောင် */
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ဖုန်းမျက်နှာပြင်အတွက် (Mobile View) */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block; /* ဖုန်းမှာ ခလုတ်ပေါ်လာမယ် */
+    }
+
+    .header-right {
+        position: absolute;
+        top: 100%; right: -100%; /* ညာဘက်အပြင်မှာ ဖျောက်ထားမယ် */
+        width: 250px;
+        background: #1a1a1a; /* နောက်ခံအမည်းရောင် */
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+        box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+    }
+
+    /* ခလုတ်နှိပ်လိုက်လို့ active ဖြစ်သွားရင် menu ပေါ်လာမယ် */
+    .header-right.active {
+        right: 0;
+    }
+
+    .header-right a {
+        display: block;
+        margin: 10px;
+        text-align: left;
+    }
+}

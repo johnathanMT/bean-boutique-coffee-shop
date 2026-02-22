@@ -308,3 +308,23 @@ function handleSubscription(planName) {
         }
     }
 }
+
+
+
+// cart.js ထဲတွင် ထည့်ရန်
+let menuBtn = document.querySelector('#menu-btn');
+let headerRight = document.querySelector('.header-right');
+
+menuBtn.onclick = () => {
+    // နှိပ်လိုက်ရင် active class ကို အဖွင့်/အပိတ် လုပ်မယ်
+    headerRight.classList.toggle('active');
+
+    // ခလုတ်ပုံစံကိုလည်း x ပုံစံ ပြောင်းချင်ရင် (optional)
+    menuBtn.classList.toggle('fa-times');
+}
+
+// စာမျက်နှာကို scroll ဆွဲလိုက်ရင် menu ပြန်ပိတ်သွားအောင်လုပ်ခြင်း
+window.onscroll = () => {
+    headerRight.classList.remove('active');
+    menuBtn.classList.remove('fa-times');
+}
