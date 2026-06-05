@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-dark text-brand-cream font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-brand-gold text-brand-dark;
+  }
+}
+
+@layer components {
+  /* Gold divider that echoes the original .gold-line look */
+  .gold-line {
+    @apply mx-auto h-[3px] w-24 rounded-full bg-gold-sheen border-0;
+  }
+
+  /* Primary call-to-action — gold foundation with a tropical hover lift */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      bg-gold-sheen px-7 py-3 font-semibold text-brand-dark
+      shadow-gold transition-all duration-300 hover:-translate-y-0.5
+      hover:brightness-110 active:translate-y-0;
+  }
+
+  /* Secondary CTA — Caribbean accent */
+  .btn-carib {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      bg-carib-gradient bg-[length:200%_200%] px-7 py-3 font-semibold
+      text-brand-dark shadow-tropical transition-all duration-300
+      hover:-translate-y-0.5 hover:animate-shimmer active:translate-y-0;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold text-brand-gold sm:text-4xl;
+  }
+
+  /* Frosted card surface used across product / event grids */
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md
+      shadow-xl transition-all duration-300;
+  }
+}
+
+/* Hide scrollbars on horizontal carousels but keep scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
